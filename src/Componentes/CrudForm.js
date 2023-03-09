@@ -6,10 +6,16 @@ const initialForm={
     lastname:''
 }
 
-const CrudForm =() => {
+const CrudForm =(create, update, dataToEdit, setDataToEdit) => {
     const[form,setForm]=useState(initialForm)
 
-    const handleChance=(e)=>{}
+    const handleChance=(e)=>{
+        //console.log(e.target.name +" "+e.target.value)//
+        setForm({
+            ...form,
+            [e.target.name]:e.target.value,
+        })
+    }
     const handleSubmit=(e)=>{}
     const handleReset=(e)=>{}
     return (

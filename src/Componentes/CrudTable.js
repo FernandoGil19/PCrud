@@ -1,4 +1,4 @@
-const CrudTable =() => {
+const CrudTable =({data}) => {
     return (
         <div>
             <h3>Tabla de Datos</h3>
@@ -11,11 +11,21 @@ const CrudTable =() => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Chumpapi</td>
-                        <td>Jr</td>
-                        <td><button>Editar</button><button>Eliminar</button></td>
-                    </tr>
+                    {
+                        data.length === 0 ? (
+                            <tr>
+                                <td colSpan="3">No existen datos</td>
+                            </tr>
+                        ) : (
+                            data.map(item => (
+                                <tr key={item.id}>
+                                    <td>{item.name}</td>
+                                    <td>{item.lastname}</td>
+                                    <td><button>Editar</button><button>Eliminar</button></td>
+                                </tr>
+                            ))
+                        )
+                    }
                 </tbody>
             </table>
         </div>
