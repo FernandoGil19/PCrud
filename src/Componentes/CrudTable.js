@@ -1,4 +1,4 @@
-const CrudTable =({data}) => {
+const CrudTable =({data, setDataToEdit, deleteData}) => {
     return (
         <div>
             <h3>Tabla de Datos</h3>
@@ -21,7 +21,10 @@ const CrudTable =({data}) => {
                                 <tr key={item.id}>
                                     <td>{item.name}</td>
                                     <td>{item.lastname}</td>
-                                    <td><button>Editar</button><button>Eliminar</button></td>
+                                    <td>
+                                        <button onClick={()=>setDataToEdit(item)}>Editar</button>
+                                        <button onClick={()=>deleteData(item.id)}>Eliminar</button>
+                                    </td>
                                 </tr>
                             ))
                         )
