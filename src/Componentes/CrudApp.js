@@ -26,7 +26,10 @@ const CrudApp =() => {
         let newData=db.map(item => item.id==data.id?data:item)
         setDb(newData)
     }
-    const deleteData=(id) =>{};
+    const deleteData=(id) =>{
+        let eliminar=db.filter(item=>item.id!==id)
+        setDb(eliminar)
+    };
 
     return (
         <div>
