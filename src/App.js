@@ -1,3 +1,4 @@
+import CrudApi from "./Componentes/CrudApi";
 import CrudApp from "./Componentes/CrudApp";
 
 const App =() => {
@@ -5,6 +6,7 @@ const App =() => {
     <div>
       <h1>Ejercicio React</h1>
       <CrudApp/>
+      <CrudApi/>
     </div>
   )
 }

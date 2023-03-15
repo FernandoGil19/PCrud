@@ -1,0 +1,24 @@
+{
+    "users":[
+        {
+            "id": 0,
+            "name": "Carlos",
+            "lastname": "Briceño"
+        },
+        {
+            "id": 1,
+            "name": "Fernando",
+            "lastname": "Gil"
+        },
+        {
+            "id": 2,
+            "name": "Kevin",
+            "lastname": "Durant"
+        },
+        {
+            "id": 3,
+            "name": "Stephen",
+            "lastname": "Curry"
+        }
+    ]
+}
