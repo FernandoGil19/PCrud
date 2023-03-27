@@ -9,7 +9,12 @@ const CrudApi =() => {
     let url='http://localhost:5000/users'
 
     useEffect(() => {
-        api.get(url).then(response => console.log(response))
+        api.get(url).then(response => {
+            //console.log(response)
+            if(!response.err){
+                setDb(null)
+            }
+        })
     }, [])
 
     const [db, setDb] = useState([])
