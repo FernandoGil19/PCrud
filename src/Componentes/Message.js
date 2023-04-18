@@ -1,9 +1,17 @@
 import React from "react";
 
-const Message =() => {
+const Message =({msg, bgColor}) => {
+    let styles={
+        padding:"1rem",
+        marginBottom:"1rem",
+        testAlign:"center",
+        color:"#fff",
+        fontWeight:"bold",
+        backgroundColor:bgColor,
+    }
     return(
-        <div>
-            <h1>Message</h1>
+        <div style={styles}>
+            <p>{msg}</p>
         </div>
     )
 }

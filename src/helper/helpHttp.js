@@ -12,7 +12,7 @@ export const helpHttp =() => {
 
         //Aqui podras ver el comportamiento de las opciones
         console.log(options);
-        setTimeout(() => {controller.abort();}, 3000);
+        setTimeout(() => {controller.abort();}, 6000);
         return fetch (endpoint, options)
         .then((response) => response.ok
         ? response.json()
